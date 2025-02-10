@@ -1,0 +1,106 @@
+/*
+vídeo guía: https://www.youtube.com/watch?v=PSwlAuRbv_A
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna para que el navbar esté en la parte superior */
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center; /* Centra los items en el navbar */
+    align-items: center;
+    padding: 10px 0; /* Espaciado arriba y abajo */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex; /* Muestra los items en línea */
+}
+
+.navbar li {
+    margin: 0 20px; /* Espacio entre los items */
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px; /* Espaciado dentro del enlace */
+    display: block; /* Para que el padding funcione correctamente */
+}
+
+.navbar a:hover {
+    background-color: #555; /* Color de fondo al pasar el ratón */
+    border-radius: 5px; /* Esquinas redondeadas para un toque elegante */
+}
+
+.main-content {
+    display: flex;
+    flex: 1; /* Ocupa el espacio restante debajo del navbar */
+}
+
+.left_side {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+}
+
+.image_container {
+    width: 50%;
+    padding: 10px;
+    background-color: #f5f5dc;
+    display: inline-block;
+}
+
+.profile_image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    justify-content: center;
+}
+
+.right_side {
+    width: 50%;
+    padding: 20px; /* Espaciado interno para el texto */
+    background-color: #ccc; 
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.right_side h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px; /* Espacio debajo del encabezado */
+    color: #222;
+}
+
+.right_side p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.right_side blockquote {
+    font-size: 1.2em;
+    border-left: 4px solid #333; /* Línea vertical a la izquierda de la cita */
+    padding-left: 20px;
+    margin-left: 0;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 10px;
+}

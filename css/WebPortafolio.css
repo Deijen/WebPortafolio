@@ -1,0 +1,639 @@
+/*
+NOTA: Seguir con el tema de las flechas y el carrusel
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+} 
+
+/*
+When selected an option in the navbar, thos block help to adjust the scroll of the selected item
+*/
+section {
+    scroll-margin-top: 50px; /* Ajusta este valor a la altura de tu navbar */
+  }
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    padding-top: 70px; /* Espacio para la barra de navegación fija */ 
+    background-color: #EAEAEA; /*Color that will be affecting all the webpage*/
+}
+
+
+.navbar {
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000; /* Asegura que la barra esté sobre otros elementos. Igual no funciona ->  */
+    display: flex;
+    justify-content: center;
+    padding: 5px 5px; 
+    
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex; /* Muestra los items en línea */
+   
+}
+
+.navbar li {
+    margin: 0 20px; /* Espacio entre los items */
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px; /* Espaciado dentro del enlace */
+    display: block; /* Para que el padding funcione correctamente */
+    
+}
+
+.navbar a:hover {
+    background-color: #555; /* Color de fondo al pasar el ratón */
+    border-radius: 5px; /* Esquinas redondeadas para un toque elegante */
+}
+
+#Gretting {
+    display: flex;
+    /*padding: top 10px;  /*Aquí también entra en conflicto lo del nav bar*/ 
+    flex: 1; 
+    padding-top: 1%;
+    background-color: #EAEAEA; 
+    /*continuar aqui*/
+    
+} 
+
+ .image-container {
+    margin-top: 0px; /* Ajusta este valor a la altura real de tu navbar */
+    border-radius: 20px 50px 20px 50px; /* Esquina superior izquierda, superior derecha, inferior derecha, inferior izquierda */
+
+}
+
+.gretting-container{
+    display: flex; 
+    flex-direction: column;
+    width: 70%; 
+    height: 70%;
+    background-color: rgb(194, 191, 191); 
+    justify-content: center;
+    border-radius: 50px 20px 50px 20px; /* Working as intended Esquina superior izquierda, superior derecha, inferior derecha, inferior izquierda */
+} 
+
+.gretting-container a{
+    text-decoration: none;
+    color: black;
+}
+
+/*
+FOto del gato
+*/
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    max-width: 500px; /* Define el ancho máximo del contenedor */
+    height: auto;
+    padding: 10px;
+    background-color: rgb(194, 191, 191);
+    margin-top: 0px;
+    padding: 10px;
+    /*  border-radius: 50px 20px 50px 20px; Already working. This line is not neccesary, Esquina superior izquierda, superior derecha, inferior derecha, inferior izquierda */
+
+    
+} 
+
+.left-side {
+    width: 50%;
+    display: flex;
+    padding: 20px; /* Espaciado interno para el texto */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6; 
+    justify-content: center;
+    align-items: center;
+    background-color: #EAEAEA;
+} 
+
+.right-side {
+    width: 50%; 
+    display: flex;
+    background-color: #EAEAEA; /*#F5F5F5;*/  
+    padding-top: 1%;
+    padding-bottom: 1%;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 0px 0px 0px 70px;  Not working Esquina superior izquierda, superior derecha, inferior derecha, inferior izquierda */
+
+}
+
+
+
+.profile_image {
+    
+    max-width: 50%; /* Ajusta este valor para hacer la imagen más pequeña */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor sin recortar */
+    display: block; /* Evita márgenes adicionales */
+    border-radius: 50px 20px 50px 20px; /* Esquina superior izquierda, superior derecha, inferior derecha, inferior izquierda */
+
+    
+} 
+
+#about-me{  
+    display: flex;
+    background-color:  #EAEAEA; 
+    align-items: center;
+    justify-content: center; 
+
+    
+} 
+
+#about-me p{
+    margin: 10px;
+    text-align: justify;
+}
+
+#about-me blockquote{
+    text-align: center;
+    margin: 10px;
+
+}
+
+.about-container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 50%;
+    height: 50%;
+    padding-top: 1%;
+    display: flex;
+    margin: 10px; /*Espacio entre los contenedores*/
+    background-color: rgb(194, 191, 191);
+    border-radius: 50px 50px 50px 50px; /* Esquina superior izquierda, superior derecha, inferior derecha, inferior izquierda */
+
+} 
+
+.about-container h1{
+    padding-bottom: 1%;
+}
+
+/************************************Skill section css**********************************/  
+
+#my-skill{
+    
+    display: flex;
+    background-color: #F5F5F5; 
+    align-items: center;
+    justify-content: center; 
+    
+}
+
+.skills-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #EAEAEA;
+    width: 50%;
+    height: auto;
+    padding-top: 10px;
+    margin-bottom: 10px; /*Espacio entre los contenedores*/
+    border-radius: 0px 0px 50px 50px; /* Esquina superior izquierda, superior derecha, inferior derecha, inferior izquierda */
+
+}
+
+.skills-container h2{
+    display: flex;
+    justify-content: center;
+} 
+
+.skills-container h3{
+    display: flex;
+    justify-content: center;
+}
+
+.skills-category {  /*Aquí*/
+    
+    margin-bottom: 30px;
+}
+
+.skills-category h3 {
+    margin-bottom: 10px;
+    color: #555; 
+    
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skill-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    width: 150px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item img {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+
+/*******************************Slider section***********************************************/
+/**
+.slider{
+    overflow: hidden; Oculta el contenido que se desborda
+  
+}
+
+.slider--inner{
+    display: flex;
+    flex-direction: row; /*El contenido se muestra en filas 
+    flex-wrap: nowrap; /*Hace que los elementos no se desborden*
+    height: 400px;
+}
+
+.arrow {
+    position: absolute;
+    
+    transform: translateY(-50%); /*Centra verticalmente
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+} 
+
+.arrow.left {
+    left: 0; /* Flecha izquierda 
+}
+
+.arrow.right {
+    right: 0; /* Flecha derecha 
+}
+
+/*******************************Work-Section css*********************************************/
+/*Continuar aquí*/
+#my-work{
+    display: flex;
+    background-color: #F5F5F5; 
+    align-items: center;
+    justify-content: center;
+    height: 100%;  /*No está afectando en nada*/
+    width: 100%;  /*No está afectando en nada*/
+    
+}
+
+.work-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 10px;
+    /*width: 100%; No está afectando en nada*/
+    /*height: 100%; No está afectando en nada*/
+    background-color: #F5F5F5;
+    margin-bottom: 10px;
+    
+    
+    
+    
+} 
+
+.work-container h2 {
+    display: flex;
+    justify-content: center;
+}
+
+/*For the titles*/
+.h2_title_container{
+    margin-bottom: 5px;
+    margin-top: 5px; 
+    background-color: rgb(194, 191, 191);;
+    width: 50%;
+    height: 50%;
+    padding: 10px;
+    border-radius: 50px 50px 50px 50px;
+
+}
+
+.h3_title_container{
+    margin-bottom: 10px;
+    margin-top: 10px; 
+    background-color: rgb(194, 191, 191);;
+    width: 50%;
+    height: 50%;
+    padding: 5px;
+    border-radius: 20px 20px 20px 20px;
+    text-align: center;
+}
+
+.work-category-sp {  /*Work category sp*/
+    background-color: rgb(194, 191, 191);
+    width: 75%;
+    height: 500px;   /*Trabajar mejor con px y no con %*/
+    
+    display: flex;
+    justify-content: space-between;  /**/
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 50px 50px 50px 50px; /* Esquina superior izquierda, superior derecha, inferior derecha, inferior izquierda */
+
+    
+} 
+
+
+
+.work-category-vg {
+    
+    background-color: rgb(194, 191, 191);
+    width: 75%;
+    height: 500px;   /*Trabajar mejor con px y no con %*/
+    
+    display: flex;
+    justify-content: space-between;  /**/
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 50px 50px 50px 50px; /* Esquina superior izquierda, superior derecha, inferior derecha, inferior izquierda */
+
+   
+ 
+} 
+
+
+
+
+
+/*
+.slider-inner {
+    display: flex;
+    
+    width: 300px; 
+}
+*/
+
+
+.work-category h3 {
+    margin-bottom: 10px;
+    
+    display: flex;
+    justify-content: center;
+   
+} 
+
+
+
+/*
+.work-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1%;
+    background-color: yellow;
+    justify-content: center; 
+   
+    
+}
+
+*/
+.work-grid {
+    min-width: 100%; /* Cada elemento ocupará todo el espacio del contenedor */
+    transition: transform 0.5s ease-in-out;
+    /*background-color: pink;*/
+    display: flex;
+    justify-content: center;
+    
+   
+    
+}
+/*
+.work-item {
+    
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    
+    justify-content: center;
+    width: 350px;
+    gap: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+*/
+ 
+
+
+.work-item {
+     /* Cada item ocupa el ancho completo del contenedor */
+   
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+}
+
+.work-item img {
+ 
+    max-width: 30%;
+    margin-bottom: 10px;
+} 
+
+
+
+/*------------------------------------------------------------------*/
+
+
+
+    .slide-right-vg{
+        
+        
+        width: 50%;
+        height: 50%;
+        background-color: #f3f2f2;
+        display: grid;
+        place-items: center;
+        
+       
+        
+       
+    } 
+
+    .slide-right-container-vg{
+        display: grid; /* Activa Grid */
+        place-items: center; /* Centra horizontal y verticalmente */
+        height: 100%; /* Asegúrate de definir la altura del contenedor */
+        width: 50%;
+        
+    }
+
+   
+
+    /******/
+    .slide-right-container-vg img{
+        width: auto; /* Permite que la imagen crezca de forma proporcional */
+        height: auto; /* Mantiene las proporciones de la imagen */
+        max-width: 100%; /* Evita que se desborde del contenedor */
+        max-height: 100%; /* Opcional si deseas limitar el crecimiento */
+        transform: scale(1.5);
+    }
+
+    .slide-left-vg{
+      
+       /*
+       max-width:  50%;
+       height: 100%;
+       justify-content: center;
+       background-color: purple;
+       text-align: justify; 
+       
+       */
+       width: 50%;
+       height: 50%;
+       box-sizing: border-box;
+       background-color: #EAEAEA;
+       padding-top: 70px;
+        
+       
+      
+
+
+    } 
+
+    .slide-left-vg p{
+        text-align: justify;
+        padding: 10px;
+    }
+
+    .slide-left-vg h3{
+        text-align: center;
+    } 
+
+    .slide-left-vg blockquote{
+        text-align: center;
+    }
+
+    .slide-left-vg a{
+        text-decoration: none;
+        color: black;
+    }
+
+    /******************************Software project**************************/
+
+
+    .slide-right-sp{
+        
+        
+        width: 50%;
+        height: 50%;
+        background-color: #f3f2f2;
+        display: grid;
+        place-items: center;
+        
+       
+        
+       
+    } 
+
+    .slide-right-container-sp{
+        display: grid; /* Activa Grid */
+        place-items: center; /* Centra horizontal y verticalmente */
+        height: 100%; /* Asegúrate de definir la altura del contenedor */
+        width: 50%;
+    }
+
+    /******/
+    .slide-right-container-sp img{
+        width: auto; /* Permite que la imagen crezca de forma proporcional */
+        height: auto; /* Mantiene las proporciones de la imagen */
+        max-width: 100%; /* Evita que se desborde del contenedor */
+        max-height: 100%; /* Opcional si deseas limitar el crecimiento */
+        transform: scale(1.5);
+    }
+
+    .slide-left-sp{
+      
+       /*
+       max-width:  50%;
+       height: 100%;
+       justify-content: center;
+       background-color: purple;
+       text-align: justify; 
+       
+       */
+       width: 50%;
+       height: 50%;
+       box-sizing: border-box;
+       background-color: #EAEAEA;
+       padding-top: 70px; 
+       
+    } 
+
+    .slide-left-sp p{
+        text-align: justify;
+        padding: 10px;
+    }
+
+    .slide-left-sp blockquote{
+        text-align: center;
+    }
+
+    .slide-left-sp h3{
+        text-align: center;
+    } 
+
+    
+
+    /**************************************************************/
+
+
+  
+/************************Contact-information*****************************/
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: #EAEAEA;
+    align-items: center;
+    justify-content: center; 
+    padding-bottom: 1%;
+
+} 
+
+.contact-container-link{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(194, 191, 191);
+    width: 50%;
+    height: auto;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: center; 
+    border-radius: 50px 50px 50px 50px; /* Esquina superior izquierda, superior derecha, inferior derecha, inferior izquierda */
+    padding: 5px;
+    
+} 
+
+.contact-container-link a{
+text-decoration: none;
+color: black;
+}

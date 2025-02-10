@@ -1,0 +1,23 @@
+body{
+    background-color: aqua;
+} 
+
+.parent{
+    border: 5px solid #000;
+    width: 250px;
+    height: 250px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.container{
+    background: red;
+    width: 100px;
+    height: 100px;
+    
+    inset: 0;
+    /*position: absolute;*/
+    position: sticky;
+    
+    margin: auto;
+}
